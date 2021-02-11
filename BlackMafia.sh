@@ -70,11 +70,12 @@ ${ORANGE} ------ Your Mind is Your Best Weapon-------●
 banner_mafia() {
 	cat <<- EOF
 ${ORANGE} 
-${ORANGE} ██████████████████████████████████████████ 
+${ORANGE} ████████████████████████████████████████████████████ 
 ${ORANGE} █ ${RED}___  _  _ _ ____ _  _ _ _  _ ____ ${MAGENTA}BlackMafia  ${ORANGE}█
 ${ORANGE} █ ${RED}|__] |__| | [__  |__| | |\ | | __ ${MAGENTA}WhatsApp    ${ORANGE}█
 ${ORANGE} █ ${RED}|    |  | | ___] |  | | | \| |__] ${MAGENTA}03094161457 ${ORANGE}█
-${ORANGE} ██████████████████████████████████████████ 
+${ORANGE} █                                                            ${ORANGE}█
+${ORANGE} ████████████████████████████████████████████████████ 
 	EOF
 }
 
