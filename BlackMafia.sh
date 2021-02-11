@@ -69,11 +69,11 @@ ${ORANGE} ------ Your Mind is Your Best Weapon-------●
 ## Small Banner
 banner_mafia() {
 	cat <<- EOF
-		${BLUE}
-                ${BLUE}╔═╗╔╗╔╗╔══╗╔══╗╔╗╔╗╔══╗╔═╦╗╔══╗
-                ${BLUE}║╬║║╚╝║╚║║╝║══╣║╚╝║╚║║╝║║║║║╔═╣
-                ${BLUE}║╔╝║╔╗║╔║║╗╠══║║╔╗║╔║║╗║║║║║╚╗║
-                ${BLUE}╚╝─╚╝╚╝╚══╝╚══╝╚╝╚╝╚══╝╚╩═╝╚══╝
+${BLUE}
+${BLUE}╔═╗╔╗╔╗╔══╗╔══╗╔╗╔╗╔══╗╔═╦╗╔══╗
+${BLUE}║╬║║╚╝║╚║║╝║══╣║╚╝║╚║║╝║║║║║╔═╣
+${BLUE}║╔╝║╔╗║╔║║╗╠══║║╔╗║╔║║╗║║║║║╚╗║
+${BLUE}╚╝─╚╝╚╝╚══╝╚══╝╚╝╚╝╚══╝╚╩═╝╚══╝
 	EOF
 }
 
@@ -296,7 +296,7 @@ tunnel_menu() {
 lovehacker_facebook() {
 	cat <<- EOF
 
-		${RED}[${WHITE}01${RED}]${ORANGE} link Editor		
+${RED}[${WHITE}01${RED}]${ORANGE} link Editor		
 	EOF
 
 	read -p "${RED}[${WHITE}-${RED}]${GREEN} Select an option : ${BLUE}"
@@ -315,11 +315,11 @@ lovehacker_facebook() {
 main_menu() {
 	{ clear; banner; echo; }
 	cat <<- EOF
-		${RED}[${WHITE}Select An Attack For Your Victim
-		${RED}[${WHITE}01${RED}]${ORANGE} Facebook
-                ${RED}[${WHITE}02${RED}]${ORANGE} Pubg
-		${RED}[${WHITE}99${RED}]${ORANGE} About
-                ${RED}[${WHITE}00${RED}]${ORANGE} Exit
+${RED}[${WHITE}Select An Attack For Your Victim
+${RED}[${WHITE}01${RED}]${ORANGE} Facebook
+${RED}[${WHITE}02${RED}]${ORANGE} Pubg
+${RED}[${WHITE}99${RED}]${ORANGE} About
+${RED}[${WHITE}00${RED}]${ORANGE} Exit
 
 	EOF
 	
