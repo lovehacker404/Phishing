@@ -82,6 +82,32 @@ ${ORANGE} ███████████████████████�
 ## Dependencies
 dependencies() {
 	echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing required packages..."
+        echo ""
+        echo -e $'\e[1;91m[\e[0m\e[1;77m+\e[0m\e[1;91m]\e[0m\e[1;96m⛔ Ngrok  Installation  ⛔ \e[0m'
+        sleep 3
+        clear
+        echo ""
+        echo ""
+        echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------  \e[1;91m\e[0m'
+        echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;91m  ⛔         DOWNLOAD REQUIREMENTS         ⛔\e[0m'
+        echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------- \e[1;91m\e[0m'
+        echo ""
+        termux-setup-storage
+        sudo apt-get install apache2 -y
+        apt install 
+        apt install ruby -y
+        apt install php -y
+        apt install jq -y
+        apt install tail -y
+        apt install curl -y
+        apt install zip -y
+        pkg install wget -y
+        pkg install ruby -y
+        pkg install gem -y
+        gem install lolcat
+        clear
+        wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip --no-check-certificate
+        unzip ngrok-stable-linux-arm.zip
 	if [[ `command -v php` && `command -v wget` && `command -v curl` && `command -v unzip` ]]; then
 		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${GREEN} Packages already installed."
 	else
