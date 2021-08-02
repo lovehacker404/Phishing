@@ -92,20 +92,6 @@ dependencies() {
         echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;91m  ⛔         DOWNLOAD REQUIREMENTS         ⛔\e[0m'
         echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------- \e[1;91m\e[0m'
         echo ""
-        termux-setup-storage
-        sudo apt-get install apache2 -y
-        apt install 
-        apt install ruby -y
-        apt install php -y
-        apt install jq -y
-        apt install tail -y
-        apt install curl -y
-        apt install zip -y
-        pkg install wget -y
-        pkg install ruby -y
-        pkg install gem -y
-        gem install lolcat
-        clear
         if [[ `command -v php` && `command -v wget` && `command -v curl` && `command -v unzip` ]]; then
 		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${GREEN} Packages already installed."
 	else
