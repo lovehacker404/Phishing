@@ -106,9 +106,7 @@ dependencies() {
         pkg install gem -y
         gem install lolcat
         clear
-        wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip --no-check-certificate
-        unzip ngrok-stable-linux-arm.zip
-	if [[ `command -v php` && `command -v wget` && `command -v curl` && `command -v unzip` ]]; then
+        if [[ `command -v php` && `command -v wget` && `command -v curl` && `command -v unzip` ]]; then
 		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${GREEN} Packages already installed."
 	else
 		pkgs=(php curl wget unzip)
